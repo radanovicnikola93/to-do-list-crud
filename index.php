@@ -11,6 +11,9 @@
 <!--Fontawesome-->
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
+<!--Custom CSS-->
+<link href="./style.css" rel="stylesheet">
+
     <title>To-Do List</title>
   </head>
   <body>
