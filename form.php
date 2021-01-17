@@ -71,3 +71,17 @@ if (isset($_GET['edit'])) { // v kolikor je gumb pritisnjen nadaljuj
         $date = $row['date'];
     }
 }
+
+// UPDATE
+if (isset($_POST['update'])) {
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $date = $_POST['date'];
+
+    $mysqli->query("UPDATE data SET name='$name', date='$date' WHERE id=$id") or die($mysqli->error());
+
+    $_SESSION['sporocilo'] = "Opravilo je bilo spremenjeno!";
+    $_SESSION['tip_Sporocila'] = "warning";
+
+    header("location: index.php");
+}
