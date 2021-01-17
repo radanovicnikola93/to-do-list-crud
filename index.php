@@ -20,6 +20,13 @@
         </nav>
     </div>
 
+    <!--prikazemo errorje v kolikor so prisotni-->
+    <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+    ?>
+
     <!--Form-->
     <div class="container mb-6" id="formDiv">
         <form action="" method="POST">
