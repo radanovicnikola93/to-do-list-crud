@@ -55,13 +55,13 @@
                 <!--Naslov-->
                 <div class="col-8">
                     <div class="mb-6">
-                        <input type="text" name="name" class="form-control" value="" placeholder="Naslov">
+                        <input type="text" name="name" class="form-control" value="<?php echo $name ?>" placeholder="Naslov">
                     </div>
                 </div>
                 <!--Datum-->
                 <div class="col-2">
                     <div class="mb-6">
-                        <input type="date" min="" id="date" name="date" class="form-control" value="" placeholder="Datum">
+                        <input type="date" min="" id="date" name="date" class="form-control" value="<?php echo date($date) ?>" placeholder="Datum">
                     </div>
                 </div>
                 <!--Button za posiljanje podatkov-->
