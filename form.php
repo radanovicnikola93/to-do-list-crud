@@ -14,6 +14,7 @@ $mysqli = new mysqli('localhost', 'root', '', 'data');
 $name = '';
 $date = '';
 $update = false;
+$id = 0;
 
 // v kolikor je napaka pri povezavi med php in bazo pokazi napako
 if ($mysqli -> connect_errno) {
