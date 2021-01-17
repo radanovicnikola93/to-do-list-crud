@@ -4,8 +4,12 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL); 
 
+// session_start() ustvari sejo ali nadaljuje trenutno sejo na podlagi identifikatorja seje, posredovanega prek metode GET ali POST
+session_start();
+
 // povezemo PHP in MySQL z classom mysqli
 $mysqli = new mysqli('localhost', 'root', '', 'data');
+
 
 // v kolikor je napaka pri povezavi med php in bazo pokazi napako
 if ($mysqli -> connect_errno) {
