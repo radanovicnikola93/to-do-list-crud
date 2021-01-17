@@ -66,7 +66,13 @@
                 </div>
                 <!--Button za posiljanje podatkov-->
                 <div class="col-2">
-                    <button type="submit" name="create" class="form-control btn btn-outline-success mb-6"></button>
+                    <?php 
+                        if ($update == true):
+                    ?>
+                        <button type="submit" name="update" class="form-control btn btn-outline-warning mb-6">Posodobi <span><i class="icon-edit"></i></span></button>
+                    <?php else: ?>
+                        <button type="submit" name="create" class="form-control btn btn-outline-success mb-6">Dodaj <span><i class="icon-save"></i></span></button>
+                    <?php endif; ?>
                 </div>
             </div>
         </form>
