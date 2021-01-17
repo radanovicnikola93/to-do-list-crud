@@ -13,6 +13,7 @@ $mysqli = new mysqli('localhost', 'root', '', 'data');
 // definiramo spremenljivke za kasnejso uporabo
 $name = '';
 $date = '';
+$update = false;
 
 // v kolikor je napaka pri povezavi med php in bazo pokazi napako
 if ($mysqli -> connect_errno) {
