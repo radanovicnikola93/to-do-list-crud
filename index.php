@@ -27,6 +27,8 @@
         error_reporting(E_ALL);
     ?>
 
+    <?php include('form.php'); ?> <!--vkljucimo PHP kodo iz druge datoteke-->
+
     <!--Form-->
     <div class="container mb-6" id="formDiv">
         <form action="" method="POST">
