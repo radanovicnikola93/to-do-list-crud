@@ -8,16 +8,15 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-<!--Fontawesome-->
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <!--Custom CSS-->
+    <link href="./style.css" rel="stylesheet">
 
-<!--Custom CSS-->
-<link href="./style.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
     <title>To-Do List</title>
   </head>
   <body>
-   <!--Main title-->
+    <!--Main title-->
     <div class="shadow p-3 mb-5 bg-success rounded">
         <nav class="navbar navbar-dark bg-success mb-1">
             <div class="container-fluid">
@@ -34,8 +33,7 @@
     ?>
 
     <?php include('form.php'); ?> <!--vkljucimo PHP kodo iz druge datoteke-->
-
-        <!--prikaz sporocil ob ustvarjanju ali brisanju elementov iz baz-->
+    <!--prikaz sporocil ob ustvarjanju ali brisanju elementov iz baz-->
     <?php if(isset($_SESSION["sporocilo"])): ?> <!--preverimo ce je session sporocilo bilo nastavljeno-->
         <div class="container mb-6">
             <!--dinamicno nastavi Bootstrap class glede na tip sporocila-->
@@ -79,7 +77,7 @@
         </form>
     </div>
 
-    <!--Obrazci za prikaz podatkov iz baze-->
+    <!--Tabela za prikaz podatkov iz baze-->
     <div class="container">
         <div class="row m6">
             <!--Vsebina iz baze-->
@@ -106,7 +104,9 @@
             <?php endwhile; ?>
         </div>
     </div>
-
+    
+    <!--Custom JS-->
+    <script src="./script.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </body>
