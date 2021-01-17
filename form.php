@@ -2,7 +2,7 @@
 // prikazemo errorje v kolikor so prisotni
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-error_reporting(E_ALL); 
+error_reporting(E_ALL);
 
 // session_start() ustvari sejo ali nadaljuje trenutno sejo na podlagi identifikatorja seje, posredovanega prek metode GET ali POST
 session_start();
@@ -55,6 +55,8 @@ if (isset($_GET['delete'])) { // v kolikor je gumb pritisnjen nadaljuj
     header("location: index.php"); // ob ustvarjanju sporocila bo redirect ostal na isti strani
 }
 
+
+
 // edit
 if (isset($_GET['edit'])) { // v kolikor je gumb pritisnjen nadaljuj 
     // definiramo spremenljivke
@@ -71,6 +73,7 @@ if (isset($_GET['edit'])) { // v kolikor je gumb pritisnjen nadaljuj
         $date = $row['date'];
     }
 }
+
 
 // UPDATE
 if (isset($_POST['update'])) {
