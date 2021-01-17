@@ -10,6 +10,9 @@ session_start();
 // povezemo PHP in MySQL z classom mysqli
 $mysqli = new mysqli('localhost', 'root', '', 'data');
 
+// definiramo spremenljivke za kasnejso uporabo
+$name = '';
+$date = '';
 
 // v kolikor je napaka pri povezavi med php in bazo pokazi napako
 if ($mysqli -> connect_errno) {
