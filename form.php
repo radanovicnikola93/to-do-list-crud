@@ -29,3 +29,19 @@ if (isset($_POST['create'])) { // v kolikor je gumb pritisnjen nadaljuj
     // redirect
     header("location: index.php"); // ob ustvarjanju sporocila bo redirect ostal na isti strani
 }
+
+// DELETE
+if (isset($_GET['delete'])) { // v kolikor je gumb pritisnjen nadaljuj 
+    // definiramo spremenljivke
+    $id = $_GET['delete'];
+
+    // brisemo iz baze
+    $mysqli->query("DELETE FROM data WHERE id=$id") or die($mysqli->error());
+
+    // session sporocila
+    $_SESSION['sporocilo'] = "Uspesno ste izbrisali opravilo!";
+    $_SESSION['tip_Sporocila'] = "danger"; // success je ime Bootstrap classa
+
+        // redirect
+    header("location: index.php"); // ob ustvarjanju sporocila bo redirect ostal na isti strani
+}
