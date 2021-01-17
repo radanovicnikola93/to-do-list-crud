@@ -35,6 +35,19 @@
 
     <?php include('form.php'); ?> <!--vkljucimo PHP kodo iz druge datoteke-->
 
+        <!--prikaz sporocil ob ustvarjanju ali brisanju elementov iz baz-->
+    <?php if(isset($_SESSION["sporocilo"])): ?> <!--preverimo ce je session sporocilo bilo nastavljeno-->
+        <div class="container mb-6">
+            <!--dinamicno nastavi Bootstrap class glede na tip sporocila-->
+        <div class="alert alert-<?=$_SESSION['tip_Sporocila']?> mb-3">
+            <?php 
+                echo $_SESSION['sporocilo'];
+                unset($_SESSION['sporocilo']);
+            ?>
+        </div>
+        </div>
+    <?php endif ?> <!--zakljucimo if-->
+
     <!--Form-->
     <div class="container mb-6" id="formDiv">
         <form action="form.php" method="POST">
