@@ -31,7 +31,7 @@
 
     <!--Form-->
     <div class="container mb-6" id="formDiv">
-        <form action="" method="POST">
+        <form action="form.php" method="POST">
             <div class="row g-2">
                 <!--Naslov-->
                 <div class="col-8">
