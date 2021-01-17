@@ -51,6 +51,7 @@
     <!--Form-->
     <div class="container mb-6" id="formDiv">
         <form action="form.php" method="POST">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
             <div class="row g-2">
                 <!--Naslov-->
                 <div class="col-8">
