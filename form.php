@@ -49,3 +49,20 @@ if (isset($_GET['delete'])) { // v kolikor je gumb pritisnjen nadaljuj
         // redirect
     header("location: index.php"); // ob ustvarjanju sporocila bo redirect ostal na isti strani
 }
+
+// edit
+if (isset($_GET['edit'])) { // v kolikor je gumb pritisnjen nadaljuj 
+    // definiramo spremenljivke
+    $id = $_GET['edit'];
+
+    $update = true;
+
+    // izberi id
+    $result = $mysqli->query("SELECT * FROM data WHERE id=$id") or die($mysqli->error());
+
+    if($result->num_rows){
+        $row = $result->fetch_array();
+        $name = $row['name'];
+        $date = $row['date'];
+    }
+}
