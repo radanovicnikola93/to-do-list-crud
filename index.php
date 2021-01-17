@@ -8,6 +8,9 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+<!--Fontawesome-->
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
     <title>To-Do List</title>
   </head>
   <body>
@@ -67,6 +70,12 @@
                         <div class="card-body">
                             <h5 class="card-title text-uppercase fs-5 fw-bold"><?php echo $row['name']; ?></h5>
                             <p class="card-text fw-lighter"><?php echo $row['date']; ?></p>
+                            <!--Urejanje elementa-->
+                            <a href="index.php?edit=<?php echo $row['id']; ?>"
+                                class="btn btn-warning">Uredi <span><i class="icon-edit"></i></span></a>
+                            <!--Brisanje elementa-->
+                            <a href="form.php?delete=<?php echo $row['id']; ?>"
+                                class="btn btn-danger">Izbrisi <span><i class="icon-trash"></i></span></a>
                         </div>
                     </div>
                 </div>
