@@ -90,7 +90,10 @@
                     <div class="card text-center mb-3 bg-success text-light">
                         <div class="card-body">
                             <h5 class="card-title text-uppercase fs-5 fw-bold"><?php echo $row['name']; ?></h5>
-                            <p class="card-text fw-lighter"><?php echo $row['date']; ?></p>
+                             <p class="card-text fw-lighter">
+                                <?php echo $row['date']; ?> 
+                                <span><input class="form-check-input" type="checkbox" id="checkboxDone" style="margin-left: 10px"></span>
+                            </p>
                             <!--Urejanje elementa-->
                             <a href="index.php?edit=<?php echo $row['id']; ?>"
                                 class="btn btn-warning">Uredi <span><i class="icon-edit"></i></span></a>
